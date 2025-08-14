@@ -1,9 +1,7 @@
 # fastapi-di-system
-좌호빈 화이팅  
-간단하게 FastAPI와 Tortoise ORM을 사용하는 템플릿입니다.
+간단하게 FastAPI와 Tortoise ORM을 사용하는 템플릿입니다 + UV
 
-## 야미
-FastAPI X Tortoise ORM X DI 와 함게 쓰세요.  
+FastAPI X Tortoise ORM X Dependency Injector 와 함게 쓰세요.  
 dto: FastAPI에서 사용하는 DTO 관리 폴더  
 entities: Tortoise ORM으로 만든 ORM 모델  
 repository: entity 생성, 삭제 관리 등  
@@ -24,6 +22,7 @@ settings는 자동으로 ``.env`` 파일을 읽어서 환경 변수를 설정합
 
 - Python 3.11 이상
 - pip (최신 버전)
+- UV
 
 ### 설치 단계
 
@@ -34,21 +33,14 @@ git clone https://github.com/your-team/cool-project.git
 ```
 
 
-2. 가상 환경 생성 및 활성화
-- Windows:
-  ```bash
-  python -m venv venv
-  venv\Scripts\activate
-  ```
-- macOS 및 Linux:
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate
-  ```
+2. UV 설치
+```bash
+pip install uv
+```
   
 3. 의존성 패키지 설치
-```bash 
-pip install -r requirements.txt
+```bash
+uv sync
 ```
 
 ### 환경 변수 설정
@@ -57,5 +49,5 @@ pip install -r requirements.txt
 
 ### 프로젝트 실행 방법
 ```bash
-python -m app
+uv run app
 ```
